@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import { getArgs } from "./helpers/args.js";
-import { printHelp } from "./service/log.service.js";
+import { printHelp } from "./services/log.service.js";
 
 const initCLI = () => {
   console.log("started");

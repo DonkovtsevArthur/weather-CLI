@@ -2,7 +2,11 @@
   "name": "weather-cli",
   "version": "1.0.0",
   "description": "cli for getting weather",
-  "main": "index.js",
+  "main": "weather.js",
+  "bin": {
+    "weather": "weather.js"
+  },
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -13,6 +17,7 @@
   "author": "Arthur Donkovtsev",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.24.0",
     "prettier": "^2.5.1"
   }
 }

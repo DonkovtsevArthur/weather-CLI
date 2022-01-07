@@ -1,5 +1,6 @@
 export const getArgs = (args) => {
   const res = {};
+
   const [_, file, ...rest] = args;
 
   rest.forEach((value, index, array) => {
@@ -8,12 +9,11 @@ export const getArgs = (args) => {
       if (index === array.length - 1) {
         res[key] = true;
       } else if (array[index + 1].charAt(0) !== "-") {
-        res[key] = array[index + 1];
+        res[key] = array.slice(index + 1).join(" ");
       } else {
         res[key] = true;
       }
     }
   });
-
   return res;
 };

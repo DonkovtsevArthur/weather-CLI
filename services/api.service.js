@@ -12,7 +12,7 @@ const getWeather = async () => {
     process.env.TOKEN ?? (await getKeyValue(TOKEN_DICTIONARY.token));
   if (!token) {
     throw new Error(
-      "Не задан ключ API, задайте его через команду -t [API_KEY]"
+      "Не задан ключ API, задайте его через команду -t [API_KEY] - https://home.openweathermap.org/api_keys"
     );
   }
 
